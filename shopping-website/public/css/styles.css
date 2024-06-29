@@ -1,0 +1,67 @@
+/* Center login form both horizontally and vertically */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style login box */
+  .login-box {
+    width: 300px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style submit button */
+  .btn-primary {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+  }
+
+/* Style catalog product cards */
+.card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+
+  /* Custom styles */
+
+/* Increase spacing for better readability */
+.container {
+    margin-top: 50px;
+  }
+  
+  /* Style product image */
+  .img-fluid {
+    max-width: 100%;
+  }
+  
+  /* Style product name */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  /* Style product price */
+  .lead {
+    font-size: 1.5rem;
+  }
+  
+  /* Style review form */
+  .review-form {
+    margin-top: 30px;
+  }
+
+  #resultStyle { 
+    margin: 10px; 
+    font-size: 30px; 
+    color: #606c38; 
+    font-weight: bolder; 
+} 
+  

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="https://source.unsplash.com/random/200x200?sig=<%= product.id %>" class="img-fluid mb-4" alt="Product Image">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="mb-4"><%= product.name %></h1>
+        <p class="lead mb-4">$<%= product.price %></p>
+        <p class="mb-4"><%= product.description %></p>
+        <form class="mb-4">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Add to Cart</button>
+        </form>
+        <a href="#" class="btn btn-outline-secondary btn-lg btn-block">Add to Wishlist</a>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="mb-3">Reviews</h2>
+        <% product.reviews.forEach(review => { %>
+          <div class="card mb-3">
+            <div class="card-body">
+              <p><%= review.text %></p>
+              <p>Sentiment: <%= review.sentiment.score %></p>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <form class="review-form">
+          <div class="form-group">
+            <label for="review">Write a Review:</label>
+            <textarea class="form-control" id="review" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Review</button>
+          <div id="resultStyle"> Sentiment: <span id="result"></span></div> 
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script> 
+</body>
+</html>
